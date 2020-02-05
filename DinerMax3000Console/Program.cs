@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using DinerMax3000.Business;
 
 namespace DinerMax3000Console
@@ -7,40 +8,22 @@ namespace DinerMax3000Console
 	{
 		static void Main(string[] args)
 		{
-			FoodMenu summerMenu = new FoodMenu();
-			summerMenu.Name = "Summer Menu";
-			summerMenu.AddMenuItem("Salmon", "Fresh Salmon", 25.99);
-			summerMenu.AddMenuItem("Chips", "Homemade Chips", 4.99);
-			summerMenu.AddMenuItem("Pizza", "Pizza of your choice!", 14.99);
-			summerMenu.HospitalDirections = "Down the street";
-
-			DrinkMenu outsideDrinks = new DrinkMenu();
-			outsideDrinks.Disclaimer = "Alcoholic drinks are 18+";
-			outsideDrinks.AddMenuItem("Lemonade", "Sweet Bubbly drink", 4.00);
+			List<Menu> menusFromDatabase = Menu.GetAllMenus();
 
 			Order HungryGuest = new Order();
-			for(int x = 0; x <= summerMenu.items.Count - 1; x++)
+
+			foreach (Menu currentMenu in menusFromDatabase)
 			{
-				MenuItem currentItem = summerMenu.items[x];
-				HungryGuest.items.Add(currentItem);
+				foreach (MenuItem currentItem in currentMenu.items)
+				{
+					HungryGuest.items.Add(currentItem);
+				}
 			}
 
-			foreach(MenuItem currentItem in outsideDrinks.items)
-			{
-				HungryGuest.items.Add(currentItem);
-			}
+			
 
 			Console.WriteLine("The total price for the order is: " + HungryGuest.Total);
-
-			try
-			{
-				outsideDrinks.AddMenuItem("Lemonade", "Sweet Bubbly drink", 0);
-			}
-			catch(Exception thrownException)
-			{
-				Console.WriteLine(thrownException.Message);
-			}
-
+			Console.WriteLine("test")
 		}
 	}
 }
