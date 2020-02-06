@@ -10,10 +10,6 @@
 
 #pragma warning disable 1591
 
-using System.Collections.Generic;
-using System.Data;
-using System.Data.DataSetExtensions;
-
 namespace DinerMax3000.Business {
     
     
@@ -376,9 +372,8 @@ namespace DinerMax3000.Business {
             private global::System.Data.DataColumn columnDisclaimer;
             
             private global::System.Data.DataColumn columnHospitalDirections;
-			internal IEnumerable<MenuRow> Rows;
-
-			[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public MenuDataTable() {
                 this.TableName = "Menu";
@@ -1073,10 +1068,8 @@ namespace DinerMax3000.Business {
                     return this.Rows.Count;
                 }
             }
-
-			public IEnumerable<MenuItemRow> Rows { get; internal set; }
-
-			[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public MenuItemRow this[int index] {
                 get {
@@ -2443,7 +2436,7 @@ SELECT Id, Name, MenuType, Disclaimer, HospitalDirections FROM Menu WHERE (Id = 
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = @"INSERT INTO [dbo].[MenuItem] ([Name], [Description], [Price]) VALUES (@Name, @Description, @Price);
-INSERT INTO Menu_MenuItem (MenuId, MenuItemId) values (@MenuId, SCOPE_IDENTITY());
+Insert into Menu_MenuItem (MenuId, MenuItemId) values (@MenuId, SCOPE_INDENTITY());
 SELECT Id, Name, Description, Price FROM MenuItem WHERE (Id = SCOPE_IDENTITY())";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
