@@ -10,6 +10,9 @@ namespace DinerMax3000Console
 		static void Main(string[] args)
 		{
 			List<Menu> menusFromDatabase = Menu.GetAllMenus();
+			Menu firstMenu = menusFromDatabase[0];
+			firstMenu.SaveNewMenuItem("Fish n Chips", "fried hake and chips", 10);
+			menusFromDatabase = Menu.GetAllMenus();
 
 			Order HungryGuest = new Order();
 

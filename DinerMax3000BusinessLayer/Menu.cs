@@ -12,6 +12,14 @@ namespace DinerMax3000.Business
 			items = new List<MenuItem>();
 		}
 
+		private int _databaseId;
+
+		public void SaveNewMenuItem(string Name, string Description, double Price)
+		{
+			MenuItemTableAdapter taMenuItem = new MenuItemTableAdapter();
+			taMenuItem.InsertNewMenuItem(Name, Description, Price, _databaseId);
+		}
+
 		public static List<Menu> GetAllMenus()
 		{
 			MenuTableAdapter taMenu = new MenuTableAdapter();
@@ -22,6 +30,7 @@ namespace DinerMax3000.Business
 			{
 				Menu currentMenu = new Menu();
 				currentMenu.Name = menuRow.Name;
+				currentMenu._databaseId = menuRow.Id;
 				allMenus.Add(currentMenu);
 
 				var dtMenuItems = taMenuItem.GetMenuItemsByMenuId(menuRow.Id);
