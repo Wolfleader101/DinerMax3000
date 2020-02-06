@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+
 using DinerMax3000.Business.DSDinerMax3000TableAdapters;
 
 namespace DinerMax3000.Business

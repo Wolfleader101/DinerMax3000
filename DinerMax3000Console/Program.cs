@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DinerMax3000.Business;
+using System.Data;
 
 namespace DinerMax3000Console
 {
@@ -23,7 +24,7 @@ namespace DinerMax3000Console
 			
 
 			Console.WriteLine("The total price for the order is: " + HungryGuest.Total);
-			Console.WriteLine("test")
+			Console.WriteLine("test");
 		}
 	}
 }
