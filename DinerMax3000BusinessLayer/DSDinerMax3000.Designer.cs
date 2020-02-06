@@ -1766,7 +1766,7 @@ SELECT Id, Name, MenuType, Disclaimer, HospitalDirections FROM Menu WHERE (Id = 
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
             this._connection.ConnectionString = "Data Source=.\\main;Initial Catalog=DinerMax3000;Persist Security Info=True;User I" +
-                "D=sa;Password=jameslmorgan10";
+                "D=sa;Password=PASSWORD";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2136,7 +2136,7 @@ SELECT Id, Name, MenuType, Disclaimer, HospitalDirections FROM Menu WHERE (Id = 
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
             this._connection.ConnectionString = "Data Source=.\\main;Initial Catalog=DinerMax3000;Persist Security Info=True;User I" +
-                "D=sa;Password=jameslmorgan10";
+                "D=sa;Password=PASSWORD";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2421,7 +2421,7 @@ SELECT Id, Name, MenuType, Disclaimer, HospitalDirections FROM Menu WHERE (Id = 
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
             this._connection.ConnectionString = "Data Source=.\\main;Initial Catalog=DinerMax3000;Persist Security Info=True;User I" +
-                "D=sa;Password=jameslmorgan10";
+                "D=sa;Password=PASSWORD";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
