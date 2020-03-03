@@ -52,7 +52,7 @@ namespace DinerMax3000.Business
 			items.Add(item);
 		}
 
-		public string Name;
-		public List<MenuItem> items;
+		public string Name { get; set; }
+		public List<MenuItem> items { get; set; }
 	}
 }
