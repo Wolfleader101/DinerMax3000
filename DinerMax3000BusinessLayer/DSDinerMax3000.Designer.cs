@@ -2436,7 +2436,7 @@ SELECT Id, Name, MenuType, Disclaimer, HospitalDirections FROM Menu WHERE (Id = 
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = @"INSERT INTO [dbo].[MenuItem] ([Name], [Description], [Price]) VALUES (@Name, @Description, @Price);
-Insert into Menu_MenuItem (MenuId, MenuItemId) values (@MenuId, SCOPE_INDENTITY());
+Insert into Menu_MenuItem (MenuId, MenuItemId) values (@MenuId, SCOPE_IDENTITY());
 SELECT Id, Name, Description, Price FROM MenuItem WHERE (Id = SCOPE_IDENTITY())";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
